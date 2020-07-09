@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { useHotkeys } from 'react-hotkeys-hook';
+import { useHotkeys } from "react-hotkeys-hook"
+import { Swipeable } from "react-swipeable"
 import { MdNavigateNext, MdNavigateBefore, MdSwapHoriz } from "react-icons/md"
 import "./Flashcards.css"
 
@@ -34,9 +35,18 @@ function Flashcards() {
     setAnswer(questions.cards[cardID].answer)
   }, [questions.cards, cardID])
 
-  useHotkeys('left', () => handlePrevious(),[cardID])
-  useHotkeys('right', () => handleNext(),[cardID])
-  useHotkeys('space', (e) =>{ e.preventDefault(); handleFlip();} ,[isFlipped])
+  useHotkeys("left", () => handlePrevious(), [cardID])
+  useHotkeys("right", () => handleNext(), [cardID])
+  useHotkeys(
+    "space",
+    e => {
+      e.preventDefault()
+      handleFlip()
+    },
+    [isFlipped]
+  )
+
+  var isTouch = (("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0));
 
   return (
     <>
@@ -44,13 +54,27 @@ function Flashcards() {
         <div className="Content">
           <div className="Intro">
             <h1>Flashcards</h1>
-            <p>Tap the card or press the spacebar to flip it over. Use the arrow keys to navigate between cards.</p>
+            {isTouch ? (
+              <p>
+                Double tap on the card to flip it over. Swipe to navigate
+                between cards.
+              </p>
+            ) : (
+              <p>
+                Press the spacebar to flip the card over. Use the arrow keys to
+                navigate between cards.
+              </p>
+            )}
           </div>
           <div className="flashcard-wrapper">
-            <div className="flashcard">
+            <Swipeable
+              className="flashcard"
+              onSwipedLeft={e => handleNext()}
+              onSwipedRight={e => handlePrevious()}
+            >
               <div
                 className={`flip-card ${isFlipped}`}
-                onClick={e => handleFlip()}
+                onDoubleClick={e => handleFlip()}
               >
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
@@ -59,7 +83,7 @@ function Flashcards() {
                       <h3>{question}</h3>
                     </div>
                     <p style={{ margin: `0`, opacity: `0.6` }}>
-                      {cardID + 1 } of {questions.cards.length}
+                      {cardID + 1} of {questions.cards.length}
                     </p>
                   </div>
                   <div className="flip-card-back">
@@ -73,7 +97,7 @@ function Flashcards() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Swipeable>
             <div className="flashcard-button-wrapper">
               <div
                 role="button"
