@@ -1,35 +1,40 @@
-.Header{
-    width: 100%;
-    height: 4em;
-    border-bottom: 1px ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--accent-purple);
-    font-weight: bold;
+.Header {
+  width: 100%;
+  height: 4em;
+  border-bottom: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--accent-purple);
+  font-weight: bold;
 }
 
-.Logo{
-    padding-left: 2em;
+.Logo {
+  padding-left: 2em;
 }
 
-.Links > ul > li{
-    list-style: none;
-    padding-left: 1em;
-    padding-right: 1em;
+.Links > ul > li {
+  list-style: none;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-.Links > ul{
-    display: flex;
-    flex-direction: row;
-    
+.Links > ul {
+  display: flex;
+  flex-direction: row;
 }
 
-.Admin{
-    padding-right: 2em;
+.Admin {
+  padding-right: 2em;
 }
 
-.Admin button{
-    margin-left: 1em;
-    outline: 1px;
+.Admin button {
+  margin-left: 1em;
+  outline: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .Admin button:last-child {
+    display: none;
+  }
 }
