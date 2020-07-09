@@ -25,9 +25,14 @@
     margin: 0 1em;
     padding: 0.5em;
     border-radius: 3em;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: var(--accent-purple);
     border: 2px solid var(--accent-purple);
+}
+
+.flashcard-button-previous:hover, .flashcard-button-next:hover, .flashcard-button-flip:hover{
+  background-color: var(--accent-purple);
+  color: #fff;
 }
 
 .flashcard{

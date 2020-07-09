@@ -32,7 +32,7 @@ function Flashcards() {
   useEffect(() => {
     setQuestion(questions.cards[cardID].question)
     setAnswer(questions.cards[cardID].answer)
-  }, [cardID])
+  }, [questions.cards, cardID])
 
   useHotkeys('left', () => handlePrevious(),[cardID])
   useHotkeys('right', () => handleNext(),[cardID])
@@ -76,18 +76,21 @@ function Flashcards() {
             </div>
             <div className="flashcard-button-wrapper">
               <div
+                role="button"
                 className="flashcard-button-previous"
                 onClick={e => handlePrevious()}
               >
                 <MdNavigateBefore />
               </div>
               <div
+                role="button"
                 className="flashcard-button-flip"
                 onClick={e => handleFlip()}
               >
                 <MdSwapHoriz />
               </div>
               <div
+                role="button"
                 className="flashcard-button-next"
                 onClick={e => handleNext()}
               >
