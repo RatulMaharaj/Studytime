@@ -31,8 +31,13 @@ function Flashcards() {
   }
 
   useEffect(() => {
+    
     setQuestion(questions.cards[cardID].question)
     setAnswer(questions.cards[cardID].answer)
+    
+    var isTouch = (("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0));
+    return isTouch
+
   }, [questions.cards, cardID])
 
   useHotkeys("left", () => handlePrevious(), [cardID])
@@ -46,7 +51,6 @@ function Flashcards() {
     [isFlipped]
   )
 
-  var isTouch = (("ontouchstart" in window) || (navigator.msMaxTouchPoints > 0));
 
   return (
     <>
