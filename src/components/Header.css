@@ -13,17 +13,6 @@
   padding-left: 2em;
 }
 
-.Links > ul > li {
-  list-style: none;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.Links > ul {
-  display: flex;
-  flex-direction: row;
-}
-
 .Admin {
   padding-right: 2em;
 }
