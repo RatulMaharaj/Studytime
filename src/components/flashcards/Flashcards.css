@@ -9,39 +9,52 @@
   margin: auto;
 }
 
-.flashcard-button-wrapper{
-    margin-top: 3em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.flashcard-button-wrapper {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.flashcard-button-previous, .flashcard-button-next, .flashcard-button-flip{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 1em;
-    padding: 0.5em;
-    border-radius: 3em;
-    font-size: 1.25em;
-    color: var(--accent-purple);
-    border: 2px solid var(--accent-purple);
+.flashcard-button-previous,
+.flashcard-button-next,
+.flashcard-button-flip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 1em;
+  padding: 0.5em;
+  border-radius: 3em;
+  font-size: 1.25em;
+  color: var(--accent-purple);
+  border: 2px solid var(--accent-purple);
 }
 
-.flashcard-button-previous:hover, .flashcard-button-next:hover, .flashcard-button-flip:hover{
+@media screen and (min-width:1024px) {
+  .flashcard-button-previous:hover,
+  .flashcard-button-next:hover,
+  .flashcard-button-flip:hover {
+    background-color: var(--accent-purple);
+    color: #fff;
+  }
+}
+
+.flashcard-button-previous:active,
+.flashcard-button-next:active,
+.flashcard-button-flip:active {
   background-color: var(--accent-purple);
   color: #fff;
 }
 
-.flashcard{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.flashcard {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 /* adapted from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 
@@ -53,7 +66,6 @@
   min-height: 23em;
   perspective: 1000px;
 }
-
 
 .flip-card-inner {
   position: relative;
@@ -70,10 +82,9 @@
   transform: rotateY(-180deg);
 } */
 
-.flipped .flip-card-inner{
+.flipped .flip-card-inner {
   transform: rotateY(-180deg);
 }
-
 
 .flip-card-front,
 .flip-card-back {
@@ -88,7 +99,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .flip-card-front {
@@ -100,12 +110,11 @@
   transform: rotateY(-180deg);
 }
 
-.flashcard-content{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+.flashcard-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-
