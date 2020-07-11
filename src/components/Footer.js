@@ -3,6 +3,9 @@ import "./Footer.css";
 import Logo from "./utility/Logo"
 
 function Footer() {
+  const today = new Date()
+  const year = today.getFullYear()
+
   return (
     <div className="footer">
       <div className="custom-shape-divider-bottom-1593378745">
@@ -22,7 +25,7 @@ function Footer() {
       <Logo/>
       <br/>
       <div>
-      &copy; Ratul Maharaj
+      &copy; {year}
       </div>
       </div>
     </div>
