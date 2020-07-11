@@ -1,12 +1,28 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import withLocation from "../withLocation"
 import Card from "../utility/Card"
 import "./Chapter.css"
 
-const Chapters = ({ search }) => {
+function Chapters({search}){
   const { subject, app } = search
-  const chapter_list = require(`../../../api/subjects/${subject}/contents.json`)
+  const [chapterList, setChapterList] = useState({
+    "subject": "",
+    "chapters": [
+      {
+        "id": 1,
+        "description": ""
+      }
+      
+    ]
+  }
+  )
+  
+  useEffect(() => {
+    setChapterList(require(`../../../static/api/subjects/${subject}/contents.json`))    
+  }, [subject])
+
+
   return (
     <div className="Content">
       <div className="Intro">
@@ -14,15 +30,14 @@ const Chapters = ({ search }) => {
         <p>Select the chapter you would like to study.</p>
       </div>
       <div className="Card-wrapper chapters">
-      {chapter_list.chapters.map(chapter => (
-        <Card
-          key={chapter.id}
-          link={`/${app}?subject=${subject}&chapter=${chapter.id}`}
-          heading={`Chapter ${chapter.id}`}
-          description={`${chapter.description}`}
-        />
-      ))}
-        
+        {chapterList.chapters.map(chapter => (
+          <Card
+            key={chapter.id}
+            link={`/${app}?subject=${subject}&chapter=${chapter.id}`}
+            heading={`Chapter ${chapter.id}`}
+            description={`${chapter.description}`}
+          />
+        ))}
       </div>
     </div>
   )

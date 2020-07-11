@@ -7,9 +7,11 @@ import SEO from "../components/seo"
 function flashcards() {
   return (
     <div id="root">
-      <SEO title="Flashcards"/>
+      <SEO title="Flashcards" />
       <Header />
-      <Flashcards />
+      <div className="content-wrapper">
+        <Flashcards />
+      </div>
       <Footer />
     </div>
   )

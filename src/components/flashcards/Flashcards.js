@@ -7,7 +7,7 @@ import "./Flashcards.css"
 // max character count of 1567 must be allowed
 
 function Flashcards(props) {
-  const questions = require("../../../api/flashcards/ExampleQuestions.json")
+  const questions = require("../../../static/api/flashcards/ExampleQuestions.json")
   const [isFlipped, setIsFlipped] = useState("")
   const [cardID, setCardID] = useState(0)
 
@@ -51,76 +51,74 @@ function Flashcards(props) {
 
   return (
     <>
-      <div className="content-wrapper">
-        <div className="Content">
-          <div className="Intro">
-            <h1>Flashcards</h1>
-            {isTouch ? (
-              <p>
-                Double tap on the card to flip it over. Swipe to navigate
-                between cards.
-              </p>
-            ) : (
-              <p>
-                Press the spacebar to flip the card over. Use the arrow keys to
-                navigate between cards.
-              </p>
-            )}
-          </div>
-          <div className="flashcard-wrapper">
-            <Swipeable
-              className="flashcard"
-              onSwipedLeft={e => handleNext()}
-              onSwipedRight={e => handlePrevious()}
+      <div className="Content">
+        <div className="Intro">
+          <h1>Flashcards</h1>
+          {isTouch ? (
+            <p>
+              Double tap on the card to flip it over. Swipe to navigate between
+              cards.
+            </p>
+          ) : (
+            <p>
+              Press the spacebar to flip the card over. Use the arrow keys to
+              navigate between cards.
+            </p>
+          )}
+        </div>
+        <div className="flashcard-wrapper">
+          <Swipeable
+            className="flashcard"
+            onSwipedLeft={e => handleNext()}
+            onSwipedRight={e => handlePrevious()}
+          >
+            <div
+              className={`flip-card ${isFlipped}`}
+              onDoubleClick={e => handleFlip()}
             >
-              <div
-                className={`flip-card ${isFlipped}`}
-                onDoubleClick={e => handleFlip()}
-              >
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <h4 style={{ margin: `0` }}>Question</h4>
-                    <div className="flashcard-content">
-                      <h3>{question}</h3>
-                    </div>
-                    <p style={{ margin: `0`, opacity: `0.6` }}>
-                      {cardID + 1} of {questions.cards.length}
-                    </p>
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <h4 style={{ margin: `0` }}>Question</h4>
+                  <div className="flashcard-content">
+                    <h3>{question}</h3>
                   </div>
-                  <div className="flip-card-back">
-                    <h4 style={{ margin: `0` }}>Answer</h4>
-                    <div className="flashcard-content">
-                      <h3>{answer}</h3>
-                    </div>
-                    <p style={{ margin: `0`, opacity: `0.6` }}>
-                      {cardID + 1} of {questions.cards.length}
-                    </p>
+                  <p style={{ margin: `0`, opacity: `0.6` }}>
+                    {cardID + 1} of {questions.cards.length}
+                  </p>
+                </div>
+                <div className="flip-card-back">
+                  <h4 style={{ margin: `0` }}>Answer</h4>
+                  <div className="flashcard-content">
+                    <h3>{answer}</h3>
                   </div>
+                  <p style={{ margin: `0`, opacity: `0.6` }}>
+                    {cardID + 1} of {questions.cards.length}
+                  </p>
                 </div>
               </div>
-            </Swipeable>
-            <div className="flashcard-button-wrapper">
-              <div
-                role="button"
-                className="flashcard-button-previous"
-                onClick={e => handlePrevious()}
-              >
-                <MdNavigateBefore />
-              </div>
-              <div
-                role="button"
-                className="flashcard-button-flip"
-                onClick={e => handleFlip()}
-              >
-                <MdSwapHoriz />
-              </div>
-              <div
-                role="button"
-                className="flashcard-button-next"
-                onClick={e => handleNext()}
-              >
-                <MdNavigateNext />
-              </div>
+            </div>
+          </Swipeable>
+          <div className="flashcard-button-wrapper">
+            <div
+              role="button"
+              className="flashcard-button-previous"
+              onClick={e => handlePrevious()}
+            >
+              <MdNavigateBefore />
+            </div>
+            <div
+              role="button"
+              className="flashcard-button-flip"
+              onClick={e => handleFlip()}
+            >
+              <MdSwapHoriz />
+            </div>
+            <div
+              role="button"
+              className="flashcard-button-next"
+              onClick={e => handleNext()}
+            >
+              <MdNavigateNext />
             </div>
           </div>
         </div>

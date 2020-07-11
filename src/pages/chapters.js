@@ -10,7 +10,7 @@ function chapters() {
       <SEO title="Chapters" />
       <Header />
       <div className="content-wrapper">
-        <Chapters/>
+        <Chapters hello='0' />
       </div>
       <Footer />
     </div>
