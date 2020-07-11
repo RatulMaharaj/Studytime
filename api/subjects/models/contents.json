@@ -1,0 +1,89 @@
+{
+  "subject": "models",
+  "chapters": [
+    {
+      "id": 1,
+      "description": "Stochastic Processes"
+    },
+    {
+      "id": 2,
+      "description": "Markov Chains"
+    },
+    {
+      "id": 3,
+      "description": "The two-state Markov Model and the Poisson Model"
+    },
+    {
+      "id": 4,
+      "description": "Time-homogeneous Markov jump processes"
+    },
+    {
+      "id": 5,
+      "description": "Time-inhomogeneous Markov jump processes"
+    },
+    {
+      "id": 6,
+      "description": "Survival models"
+    },
+    {
+      "id": 7,
+      "description": "Estimating the lifetime distribution"
+    },
+    {
+      "id": 8,
+      "description": "Proportional hazards model"
+    },
+    {
+      "id": 9,
+      "description": "Exposed to risk"
+    },
+    {
+      "id": 10,
+      "description": "Graduation and statistical tests"
+    },
+    {
+      "id": 11,
+      "description": "Methods of graduation"
+    },
+    {
+      "id": 12,
+      "description": "Mortality projection"
+    },
+    {
+      "id": 13,
+      "description": "Time series 1"
+    },
+    {
+      "id": 14,
+      "description": "Time series 2"
+    },
+    {
+      "id": 15,
+      "description": "Loss distributions"
+    },
+    {
+      "id": 16,
+      "description": "Extreme value theory"
+    },
+    {
+      "id": 17,
+      "description": "Copulas"
+    },
+    {
+      "id": 18,
+      "description": "Reinsurance"
+    },
+    {
+      "id": 19,
+      "description": "Risk models 1"
+    },
+    {
+      "id": 20,
+      "description": "Risk models 2"
+    },
+    {
+      "id": 21,
+      "description": "Machine Learning"
+    }
+  ]
+}

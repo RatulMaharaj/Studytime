@@ -1,0 +1,57 @@
+{
+  "subject": "contingencies",
+  "chapters": [
+    {
+      "id": 14,
+      "description": "The life table"
+    },
+    {
+      "id": 15,
+      "description": "Life assurance contracts"
+    },
+    {
+      "id": 16,
+      "description": "Life annuity contracts"
+    },
+    {
+      "id": 17,
+      "description": "Evaluation of assurances and annuities"
+    },
+    {
+      "id": 18,
+      "description": "Variable benefits and conventional with-profits policies"
+    },
+    {
+      "id": 19,
+      "description": "Gross premiums"
+    },
+    {
+      "id": 20,
+      "description": "Gross premiums reserves"
+    },
+    {
+      "id": 21,
+      "description": "Joint life and last survivor functions"
+    },
+    {
+      "id": 22,
+      "description": "Contingent and reversionary benefits"
+    },
+    {
+      "id": 23,
+      "description": "Mortality profit"
+    },
+    {
+      "id": 24,
+      "description": "Competing risks"
+    },
+    {
+      "id": 25,
+      "description": "Profit testing"
+    },
+    {
+      "id": 26,
+      "description": "Reserving aspects of profit testing"
+    }
+  ]
+}
