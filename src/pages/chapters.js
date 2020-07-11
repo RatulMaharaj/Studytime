@@ -1,20 +1,20 @@
 import React from "react"
 import Header from "../components/Header"
-import Subjects from "../components/subjects/Subjects"
 import Footer from "../components/Footer"
+import Chapters from "../components/chapters/Chapters"
 import SEO from "../components/seo"
 
-function Index() {
+function chapters() {
   return (
     <div id="root">
-      <SEO title="Home" />
+      <SEO title="Chapters" />
       <Header />
       <div className="content-wrapper">
-        <Subjects />
+        <Chapters/>
       </div>
       <Footer />
     </div>
   )
 }
 
-export default Index
+export default chapters

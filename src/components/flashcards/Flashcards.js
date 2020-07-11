@@ -6,7 +6,7 @@ import "./Flashcards.css"
 
 // max character count of 1567 must be allowed
 
-function Flashcards() {
+function Flashcards(props) {
   const questions = require("../../../api/flashcards/ExampleQuestions.json")
   const [isFlipped, setIsFlipped] = useState("")
   const [cardID, setCardID] = useState(0)
