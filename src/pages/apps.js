@@ -1,20 +1,20 @@
 import React from "react"
 import Header from "../components/Header"
-import Apps from "../components/apps/Apps"
 import Footer from "../components/Footer"
+import Apps from "../components/apps/Apps"
 import SEO from "../components/seo"
 
-function Contingencies() {
+function flashcards() {
   return (
     <div id="root">
       <SEO title="Apps" />
       <Header />
       <div className="content-wrapper">
-        <Apps pastpapers={true} quiz={true} flashcards={false} />
+        <Apps/>
       </div>
       <Footer />
     </div>
   )
 }
 
-export default Contingencies
+export default flashcards
