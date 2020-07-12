@@ -3,26 +3,31 @@
   "cards": [
     {
       "id": 1,
+      "question": "$$\\int_{a}^{b} f(x)dx = F(b) - F(a)$$",
+      "answer": "This is an answer inline with TeX $$\\int_{a}^{b} f(x)dx = F(b) - F(a)$$"
+    },
+    {
+      "id": 2,
       "question": "In Harry Potter, what is the name of The Weasley's house?",
       "answer": "The Burrow"
     },
     {
-      "id": 2,
+      "id": 3,
       "question": "What's a baby rabbit called?",
       "answer": "A kit"
     },
     {
-      "id": 3,
+      "id": 4,
       "question": "Typically, what's the strongest muscle in the human body?",
       "answer": "The masseter - the main jaw muscle"
     },
     {
-      "id": 4,
+      "id": 5,
       "question": "What does LGBTQ stand for?",
       "answer": "Lesbian, gay, bisexual, transgender, and questioning (or queer)"
     },
     {
-      "id": 5,
+      "id": 6,
       "question": "To a single decimal point, many kilometers in a mile?",
       "answer": "1.6km"
     }
