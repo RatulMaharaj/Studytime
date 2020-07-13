@@ -1,36 +1,55 @@
 {
-    "pack": "Chapter 1 - Stochastic Processes",
-    "cards": [
-      {
-        "id": 1,
-        "question": "$$\\int_{a}^{b} f(x)dx = F(b) - F(a)$$",
-        "answer": "This is an answer inline with TeX $$\\int_{a}^{b} f(x)dx = F(b) - F(a)$$"
-      },
-      {
-        "id": 2,
-        "question": "In Harry Potter, what is the name of The Weasley's house?",
-        "answer": "The Burrow"
-      },
-      {
-        "id": 3,
-        "question": "What's a baby rabbit called?",
-        "answer": "A kit"
-      },
-      {
-        "id": 4,
-        "question": "Typically, what's the strongest muscle in the human body?",
-        "answer": "The masseter - the main jaw muscle"
-      },
-      {
-        "id": 5,
-        "question": "What does LGBTQ stand for?",
-        "answer": "Lesbian, gay, bisexual, transgender, and questioning (or queer)"
-      },
-      {
-        "id": 6,
-        "question": "To a single decimal point, many kilometers in a mile?",
-        "answer": "1.6km"
-      }
-    ]
-  }
-  
+  "pack": "Stochastic Processes",
+  "cards": [
+    {
+      "id": 1,
+      "question": "What is a stochastic process?",
+      "answer": "A stochastic process is a collection of random variables $$X_{t}$$, for each time $$t$$ in the time set $$J$$. <br/> <br/> The process is denoted by $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace $$"
+    },
+    {
+      "id": 2,
+      "question": "Define the time set (or time domain) of a stochastic process $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace$$.",
+      "answer": "The time set of a stochastic process is the set $$J$$ that contains all points in time at which the value of the process can eventually be observed. The time set may be discrete or continuous."
+    },
+    {
+      "id": 3,
+      "question": "Define the state space of a stochastic process $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace$$.",
+      "answer": "The state space of a stochastic process $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace$$ is the set of values that the random variables $$X_{t}$$ can take. The state space may be discrete or continuous."
+    },
+    {
+      "id": 4,
+      "question": "Define the sample path of a stochastic process $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace$$.",
+      "answer": "A sample path is a joint realisisation of the random variables $$X_{t}$$ for all $$t \\space \\in \\space J$$. <br/> <br/> A random process may take many paths which is why it is random. Once the process has evolved, the path taken is a sample of size 1 from all the possible paths."
+    },
+    {
+      "id": 5,
+      "question": "Give an example of a stochastic process with a discrete state space and a discrete time set. <br/> <br/> Give an example of a problem that can be modelled with a process like this.",
+      "answer": "Examples of stochastic processes with discrete state spaces and discrete time sets include Markov chains, simple random walks, and white noise processes with discrete time sets. <br/> <br/> An example of such a process is a no claims discount system. In this case, the discrete random variable $$X_{t}$$ represents the discount level received in the year $$t$$."
+    },
+    {
+      "id": 6,
+      "question": "Give an example of a stochastic process with a discrete state space and a continuous time set. <br/> <br/> Give an example of a problem that can be modelled with a process like this.",
+      "answer": "Examples of stochastic processes with discrete state spaces and continuous time sets include Markov Jump Processes (Poisson processes are a special case of this) and counting processes. <br/> <br/> An example of such a process is an health, sickness, death model. Such a model can be used to value sickness benefits.  In this case, the discrete random variable $$X_{t}$$ takes one of the values healthy, sick or dead for each time $$t \\leq 0$$."
+    },
+    {
+      "id": 7,
+      "question": "Give an example of a stochastic process with a continuous state space and a discrete time set. <br/> <br/> Give an example of a problem that can be modelled with a process like this.",
+      "answer": "Examples of stochastic processes with discrete state spaces and continuous time sets include general random walks, time series, and white noise processes with continuous state spaces. <br/> <br/> An example of such a process that we may want to model is the cumulative claim amounts from a portfolio of insurance policies at the end of each month. Other examples include the share price of a company at the end of each trading day or a country's annual inflation rate."
+    },
+    {
+      "id": 8,
+      "question": "Give an example of a stochastic process with a continuous state space and a continuous time set. <br/> <br/> Give an example of a problem that can be modelled with a process like this.",
+      "answer": "Examples of stochastic processes with discrete state spaces and continuous time sets include Brownian motion, diffusion processes and compound poisson processes with continuous state spaces. <br/> <br/>  An example of such a process that we may want to model is the cumulative claim amounts from a portfolio of insurance policies up to time $$t$$. Another example is the share price of a company at time $$t$$, where $$t$$ is the time since trading began."
+    },
+    {
+      "id": 9,
+      "question": "What is meant by a stochastic process of mixed type? Give an example of such a process.",
+      "answer": "A stochastic process is said to be of mixed type is it operates in continuous time but can change value at predetermined discrete points in time. <br/> <br/> An example is the number of contributors to a pension scheme in which members can retire on any birthday between the ages of 60 and 65. Deaths can occur at any time but retirements can only occur at predetermined discrete times. This is a mixture of a continuous time processes and discrete time process."
+    },
+    {
+      "id": 9,
+      "question": "What is a counting process? Give an example.",
+      "answer": "A counting process is a stochastic process, $$X(t)$$, in discrete or continuous time with the following properties: <ul style='text-align:left'><li>Its state space is the set of whole numbers $$\\lbrace 0,1,2,3,... \\rbrace$$</li><li>$$X(t)=0$$</li><li>$$X(t)$$ is a non-decreasing function of $$t$$</li></ul> An example of a counting process is the number of claims arising from a portfolio of policies up to time t."
+    }
+  ]
+}

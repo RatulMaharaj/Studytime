@@ -9,7 +9,7 @@ import "./Flashcards.css"
 function Flashcards({search}) {
   const { subject, chapter } = search
   const [cardPack, setCardPack] = useState({
-    pack: "Default Pack",
+    pack: "Flashcards",
     cards: [
       {
         id: 1,
@@ -67,7 +67,7 @@ function Flashcards({search}) {
     <>
       <div className="Content">
         <div className="Intro">
-          <h1>Flashcards</h1>
+          <h1>{cardPack.pack}</h1>
           {isTouch ? (
             <p>
               Double tap on the card to flip it over. Swipe to navigate between

@@ -17,20 +17,20 @@ function Flashcard(props) {
         >
           <div className="flip-card-inner">
             <div className="flip-card-front">
-              <h4 style={{ margin: `0` }}>Question</h4>
+              <h4 className="flashcard-header">Question</h4>
               <div className="flashcard-content">
                 <InlineTex texContent={props.question} />
               </div>
-              <p style={{ margin: `0`, opacity: `0.6` }}>
+              <p className="flashcard-footer">
                 {props.cardID + 1} of {props.cardTotal}
               </p>
             </div>
             <div className="flip-card-back">
-              <h4 style={{ margin: `0` }}>Answer</h4>
+              <h4 className="flashcard-header">Answer</h4>
               <div className="flashcard-content">
                 <InlineTex texContent={props.answer} />
               </div>
-              <p style={{ margin: `0`, opacity: `0.6` }}>
+              <p className="flashcard-footer">
                 {props.cardID + 1} of {props.cardTotal}
               </p>
             </div>
