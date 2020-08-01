@@ -22,7 +22,7 @@ function Flashcard(props) {
                 <InlineTex texContent={props.question} />
               </div>
               <p className="flashcard-footer">
-                {props.cardID + 1} of {props.cardTotal}
+                {props.cardID} of {props.cardTotal}
               </p>
             </div>
             <div className="flip-card-back">
@@ -31,7 +31,7 @@ function Flashcard(props) {
                 <InlineTex texContent={props.answer} />
               </div>
               <p className="flashcard-footer">
-                {props.cardID + 1} of {props.cardTotal}
+                {props.cardID} of {props.cardTotal}
               </p>
             </div>
           </div>

@@ -47,7 +47,7 @@
       "answer": "A stochastic process is said to be of mixed type is it operates in continuous time but can change value at predetermined discrete points in time. <br/> <br/> An example is the number of contributors to a pension scheme in which members can retire on any birthday between the ages of 60 and 65. Deaths can occur at any time but retirements can only occur at predetermined discrete times. This is a mixture of a continuous time processes and discrete time process."
     },
     {
-      "id": 9,
+      "id": 10,
       "question": "What is a counting process? Give an example.",
       "answer": "A counting process is a stochastic process, $$X(t)$$, in discrete or continuous time with the following properties: <ul style='text-align:left'><li>Its state space is the set of whole numbers $$\\lbrace 0,1,2,3,... \\rbrace$$</li><li>$$X(t)=0$$</li><li>$$X(t)$$ is a non-decreasing function of $$t$$</li></ul> An example of a counting process is the number of claims arising from a portfolio of policies up to time t."
     }
