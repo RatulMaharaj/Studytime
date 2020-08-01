@@ -1,15 +1,12 @@
 import React from "react"
-import { Swipeable } from "react-swipeable"
 import { InlineTex } from "react-tex"
 import "katex/dist/katex.min.css"
 
 function Flashcard(props) {
   return (
     <>
-      <Swipeable
+      <div
         className="flashcard"
-        onSwipedLeft={e => props.handleNext()}
-        onSwipedRight={e => props.handlePrevious()}
       >
         <div
           className={`flip-card ${props.isFlipped}`}
@@ -36,7 +33,7 @@ function Flashcard(props) {
             </div>
           </div>
         </div>
-      </Swipeable>
+      </div>
     </>
   )
 }

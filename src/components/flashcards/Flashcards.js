@@ -3,13 +3,14 @@ import {
   CarouselProvider,
   Slider,
   Slide,
+  ButtonPlay,
   ButtonBack,
   ButtonNext,
 } from "pure-react-carousel"
+import { MdNavigateNext, MdNavigateBefore, MdSwapHoriz } from "react-icons/md"
 import PropTypes from "prop-types"
 import { useHotkeys } from "react-hotkeys-hook"
 import Flashcard from "./Flashcard"
-import FlashcardButtons from "./FlashcardButtons"
 import withLocation from "../withLocation"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import "./Flashcards.css"
@@ -28,23 +29,9 @@ function Flashcards({ search }) {
   })
   const [cardID, setCardID] = useState(0)
   const [isFlipped, setIsFlipped] = useState("")
-  // const [question, setQuestion] = useState(cardPack.cards[0].question)
-  // const [answer, setAnswer] = useState(cardPack.cards[0].answer)
 
   const handleFlip = e => {
     isFlipped === "" ? setIsFlipped("flipped") : setIsFlipped("")
-  }
-
-  const handlePrevious = e => {
-    cardID - 1 < 0 ? setCardID(0) : setCardID(cardID - 1)
-    setIsFlipped("")
-  }
-
-  const handleNext = e => {
-    setIsFlipped("")
-    cardID + 1 >= cardPack.cards.length
-      ? setCardID(cardPack.cards.length - 1)
-      : setCardID(cardID + 1)
   }
 
   const [isTouch, setIsTouch] = useState(true)
@@ -58,12 +45,10 @@ function Flashcards({ search }) {
       console.log(error)
     }
     setIsTouch("ontouchstart" in window || navigator.msMaxTouchPoints > 0)
-    // setQuestion(cardPack.cards[cardID].question)
-    // setAnswer(cardPack.cards[cardID].answer)
   }, [cardPack, cardID, subject, chapter])
 
-  useHotkeys("left", () => handlePrevious(), [cardID])
-  useHotkeys("right", () => handleNext(), [cardID])
+  useHotkeys("left", () => {}, [cardID])
+  useHotkeys("right", () => {}, [cardID])
   useHotkeys(
     "space",
     e => {
@@ -91,36 +76,53 @@ function Flashcards({ search }) {
           )}
         </div>
         <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={28}
           totalSlides={cardPack.cards.length}
+          naturalSlideWidth={100}
+          naturalSlideHeight={26}
+          isIntrinsicHeight={true}
         >
           <Slider>
             {cardPack.cards.map(card => (
-              <Slide index={card.id}>
+              <Slide index={card.id} style={{ padding: `2em` }} onDrag={e =>{setIsFlipped("")}}>
                 <Flashcard
                   cardID={card.id}
                   cardTotal={cardPack.cards.length}
                   isFlipped={isFlipped}
                   question={card.question}
                   answer={card.answer}
-                  handleNext={handleNext}
-                  handlePrevious={handlePrevious}
                   handleFlip={handleFlip}
                 />
               </Slide>
             ))}
           </Slider>
-          <ButtonBack onClick={e => setIsFlipped("")}>Back</ButtonBack>
-        <ButtonNext onClick={e => setIsFlipped("")}>Next</ButtonNext>
+          <div className="flashcard-button-wrapper">
+            <ButtonBack
+              onClick={e => setIsFlipped("")}
+              style={{ border: `none` }}
+            >
+              <div className="flashcard-button-next">
+                <MdNavigateBefore />
+              </div>
+            </ButtonBack>
+            <ButtonPlay disabled={true} style={{ border: `none` }}>
+              <div
+                role="button"
+                className="flashcard-button-flip"
+                onClick={e => handleFlip()}
+              >
+                <MdSwapHoriz />
+              </div>
+            </ButtonPlay>
+            <ButtonNext
+              onClick={e => setIsFlipped("")}
+              style={{ border: `none` }}
+            >
+              <div className="flashcard-button-next">
+                <MdNavigateNext />
+              </div>
+            </ButtonNext>
+          </div>
         </CarouselProvider>
-        <div className="flashcard-wrapper">
-          <FlashcardButtons
-            handleNext={handleNext}
-            handlePrevious={handlePrevious}
-            handleFlip={handleFlip}
-          />
-        </div>
       </div>
     </>
   )
