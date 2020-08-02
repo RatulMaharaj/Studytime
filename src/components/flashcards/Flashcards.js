@@ -47,8 +47,6 @@ function Flashcards({ search }) {
     setIsTouch("ontouchstart" in window || navigator.msMaxTouchPoints > 0)
   }, [cardPack, cardID, subject, chapter])
 
-  useHotkeys("left", () => {}, [cardID])
-  useHotkeys("right", () => {}, [cardID])
   useHotkeys(
     "space",
     e => {
@@ -83,7 +81,7 @@ function Flashcards({ search }) {
         >
           <Slider moveThreshold={0.01}>
             {cardPack.cards.map(card => (
-              <Slide index={card.id} style={{ padding: `2em` }} onDrag={e =>{setIsFlipped("")}}>
+              <Slide key={card.id} index={card.id} style={{ padding: `2em` }}>
                 <Flashcard
                   cardID={card.id}
                   cardTotal={cardPack.cards.length}
@@ -104,14 +102,11 @@ function Flashcards({ search }) {
                 <MdNavigateBefore />
               </div>
             </ButtonBack>
-            <ButtonPlay disabled={true} style={{ border: `none` }} onClick={e => handleFlip()}>
-              <div
-                role="button"
-                className="flashcard-button-flip"
-              >
-                <MdSwapHoriz />
-              </div>
-            </ButtonPlay>
+
+            <div onClick={e => handleFlip()} className="flashcard-button-flip">
+              <MdSwapHoriz />
+            </div>
+
             <ButtonNext
               onClick={e => setIsFlipped("")}
               style={{ border: `none` }}
