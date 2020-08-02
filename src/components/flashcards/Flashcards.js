@@ -68,7 +68,7 @@ function Flashcards({ search }) {
             </p>
           ) : (
             <p>
-              Press the spacebar to flip the card over. Use the arrow keys to
+              Press the spacebar to flip the card over. Use the arrows to
               navigate between cards.
             </p>
           )}
