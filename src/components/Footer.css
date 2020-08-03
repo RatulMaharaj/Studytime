@@ -4,32 +4,9 @@
     display: block;
 }
 
-/* SVG Wave from https://www.shapedivider.app */
-.custom-shape-divider-bottom-1593378745 {
-    /* position: absolute; */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1593378745 svg {
-    position: relative;
-    display: block;
-    width: calc(210% + 1.3px);
-    height: 240px;
-    z-index: -1;
-}
-
-.custom-shape-divider-bottom-1593378745 .shape-fill {
-    fill: #fff;
-}
-
 .Footer-content {
-    background-color: #fff;
     height: auto;
-    padding: 2em;
+    padding: 2em 0 1em 0 ;
     align-items: center;
     justify-content: center;
     text-align: center;
