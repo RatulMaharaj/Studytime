@@ -19,7 +19,7 @@
     {
       "id": 4,
       "question": "Define the sample path of a stochastic process $$ \\lbrace X_{t}: t \\space \\in \\space J \\rbrace$$.",
-      "answer": "A sample path is a joint realisisation of the random variables $$X_{t}$$ for all $$t \\space \\in \\space J$$. <br/> <br/> A random process may take many paths which is why it is random. Once the process has evolved, the path taken is a sample of size 1 from all the possible paths."
+      "answer": "A sample path is a joint realisation of the random variables $$X_{t}$$ for all $$t \\space \\in \\space J$$. <br/> <br/> A random process may take many paths which is why it is random. Once the process has evolved, the path taken is a sample of size 1 from all the possible paths."
     },
     {
       "id": 5,
@@ -50,6 +50,41 @@
       "id": 10,
       "question": "What is a counting process? Give an example.",
       "answer": "A counting process is a stochastic process, $$X(t)$$, in discrete or continuous time with the following properties: <ul style='text-align:left'><li>Its state space is the set of whole numbers $$\\lbrace 0,1,2,3,... \\rbrace$$</li><li>$$X(t)=0$$</li><li>$$X(t)$$ is a non-decreasing function of $$t$$</li></ul> An example of a counting process is the number of claims arising from a portfolio of policies up to time t."
+    },
+    {
+      "id": 11,
+      "question": "What does it mean for a stochastic process to be strictly stationary?",
+      "answer": "A stochastic process $$\\lbrace X_{t} : t \\space \\epsilon \\space J \\rbrace $$ is said to be (strictly) stationary if the joint distributions of $$X_{t_{1}}, X_{t_{2}}, \\cdots X_{t_{n}}$$ and $$X_{t_{1}+k}, X_{t_{2}+k}, \\cdots X_{t_{n}+k}$$ are identical for all $$t_{1}, t_{2}, \\cdots t_{n}$$ and all $$t_{1}+k, t_{2}+k, \\cdots t_{n}+k$$ in $$J$$ and are all positive integers $$n$$. This means that the statistical properties of the process does not change over time."
+    },
+    {
+      "id": 12,
+      "question": "Define a white noise process, and comment on it's mean and covariance.",
+      "answer": "A white noise process is a stochastic process that consists of a set of independent  and identically distributed random variables.<br/><br/> The time set and state space (i.e. the distribution of the random variables) can be discrete or continuous."
+    },
+    {
+      "id": 13,
+      "question": "Comment on the mean and covariance of a white noise process.",
+      "answer": "White noise processes are normally defined as having a mean of zero at all times i.e. $$m(t)=E(X_{t})=0 $$ for all values of $$t$$. In a white noise process with a mean of zero, the covariance of the process: <br/><br/> $$cov(X_{t},X_{s})=E \\big[ \\big(X_{s}-m(s) \\big) \\big(X_{t}-m(t) \\big) \\big]$$ <br/><br/> is zero for $$s \\ne t$$"
+    },
+    {
+      "id": 14,
+      "question": "Explain what it means to say that a stochastic process has independent increments.",
+      "answer": "A stochastic process $$\\lbrace X_{t}: t \\space \\epsilon \\space J \\rbrace$$ is said to have independent increments if for all $$t$$ and all $$u \\gt 0$$, the increment $$X_{t+u} - X_{t}$$ is independent of the values of the process up to and including time $$t$$."
+    },
+    {
+      "id": 15,
+      "question": "Explain what it means to say that a stochastic process has the Markov Property.",
+      "answer": "A stochastic process $$\\lbrace X_{t}: t \\space \\epsilon \\space A \\rbrace $$ is said to have the Markov property if:<br/><br/> $$P\\big( X_{t} \\space \\epsilon \\space A \\space | X_{s_{1}}=x_{1}, X_{s_{2}}=x_{2}, \\cdots, X_{s_{n}}=x_{n}, X_{s}=x  \\big)= P\\big( X_{t} \\space \\epsilon \\space A \\space | X_{s}=x  \\big)$$<br/><br/> for all times $$s_{1} \\lt s_{2} \\lt \\cdots s_{n} \\lt s \\lt t $$ in $$J$$, all states $$x_{1}, x_{2}, \\cdots ,x_{n}, x$$ in $$S$$ and all subsets $$A$$ of $$S$$."
+    },
+    {
+      "id": 16,
+      "question": "Explain what is meant by the filtration of a stochastic process.",
+      "answer": "The filtration $$\\lbrace \\displaystyle{\\mathcal{F_{t}}} : t\\ge 0 \\rbrace$$ of a stochastic process is the set of events that describes the information gained by observing the process up to time $$t$$."
+    },
+    {
+      "id": 17,
+      "question": "Define the Markov property in terms of the filtration.",
+      "answer": "We can use the filtration $$$$ to say that the process has the Markov property if:<br/><br/> $$P\\big( X_{t} \\space \\epsilon \\space A \\space | \\displaystyle{\\mathcal{F_{s}}} \\big)=P\\big( X_{t} \\space \\epsilon \\space A \\space | X_{s} \\big)$$"
     }
   ]
 }
