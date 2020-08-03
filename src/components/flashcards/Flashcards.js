@@ -3,13 +3,11 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  ButtonPlay,
   ButtonBack,
   ButtonNext,
 } from "pure-react-carousel"
 import { MdNavigateNext, MdNavigateBefore, MdSwapHoriz } from "react-icons/md"
 import PropTypes from "prop-types"
-import { useHotkeys } from "react-hotkeys-hook"
 import Flashcard from "./Flashcard"
 import withLocation from "../withLocation"
 import "pure-react-carousel/dist/react-carousel.es.css"
@@ -47,15 +45,25 @@ function Flashcards({ search }) {
     setIsTouch("ontouchstart" in window || navigator.msMaxTouchPoints > 0)
   }, [cardPack, cardID, subject, chapter])
 
-  useHotkeys(
-    "space",
-    e => {
+  const onKeydown = e => {
+    console.log(e.key)
+    if(e.key === " "){
       e.preventDefault()
       handleFlip()
-    },
-    [isFlipped]
-  )
-
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault()
+      document.getElementById("BackButton").click()
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault()
+      document.getElementById("NextButton").click()
+    }
+  }
+  
+  useEffect(() => {
+    document.addEventListener("keydown", onKeydown)
+    return () => document.removeEventListener("keydown", onKeydown)
+  })
+ 
   return (
     <>
       <div className="Content">
@@ -95,10 +103,11 @@ function Flashcards({ search }) {
           </Slider>
           <div className="flashcard-button-wrapper">
             <ButtonBack
+              id="BackButton"
               onClick={e => setIsFlipped("")}
               style={{ border: `none` }}
             >
-              <div className="flashcard-button-next">
+              <div className="flashcard-button-previous">
                 <MdNavigateBefore />
               </div>
             </ButtonBack>
@@ -108,6 +117,7 @@ function Flashcards({ search }) {
             </div>
 
             <ButtonNext
+              id="NextButton"
               onClick={e => setIsFlipped("")}
               style={{ border: `none` }}
             >
