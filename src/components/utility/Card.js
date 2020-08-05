@@ -8,6 +8,7 @@ function Card(props) {
   return (
     <Link
       to={props.link}
+      id={props.id}
       className={`Card ${props.active === false ? `inactive` : ``}`}
       onClick={(e)=> props.active === false ? e.preventDefault() : null}
     >

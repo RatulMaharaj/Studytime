@@ -21,6 +21,7 @@ const App = ({ search }) => {
             active={learn==='0' ? false : true}
             icon={<GiCardRandom className="icon" />}
             heading="Flashcards"
+            id="FlashcardApp"
             tags={["learn"]}
             description="Master your content using flashcards."
           />
@@ -29,6 +30,7 @@ const App = ({ search }) => {
             active={practice==='0' ? false : true}
             icon={<GiPencil className="icon" />}
             heading="Past Exam Questions"
+            id="PastExamQuestions"
             tags={["Practice"]}
             description="Practice your skills with past exam questions."
           />
@@ -37,6 +39,7 @@ const App = ({ search }) => {
             active={test==='0' ? false : true}
             icon={<GiTimeTrap className="icon" />}
             heading="Quiz"
+            id="Quiz"
             tags={["Test"]}
             description="See how you fair under time pressure."
           />

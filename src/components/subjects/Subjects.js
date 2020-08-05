@@ -15,6 +15,7 @@ function Content() {
           link='/apps?subject=models&practice=0&test=0'
           icon={<GiLifeBar className="icon" />}
           heading="Risk Modelling and Survival Analysis"
+          id="RiskModels"
           tags={["A212", "CS2"]}
           description="Flashcards, Past Exam Questions and MCQ's based on the A212 content (combined A202 and A204)."
         />
@@ -22,6 +23,7 @@ function Content() {
           link='/apps?subject=contingencies&practice=0&test=0'
           icon={<GiFlame className="icon" />}
           heading="Contingencies"
+          id="Contis"
           tags={["A213", "CM1"]}
           description="Past Exam Questions and MCQ's based on the content of A213 (commonly referred to as CT5)."
         />
@@ -29,6 +31,7 @@ function Content() {
           link='/apps?subject=communications&learn=0&practice=0&test=0'
           icon={<GiMicrophone className="icon" />}
           heading="Communications"
+          id="Comms"
           tags={["N211"]}
           description="Communications Exam Preparation."
         />

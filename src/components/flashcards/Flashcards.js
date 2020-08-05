@@ -44,25 +44,6 @@ function Flashcards({ search }) {
     }
     setIsTouch("ontouchstart" in window || navigator.msMaxTouchPoints > 0)
   }, [cardPack, cardID, subject, chapter])
-
-  const onKeydown = e => {
-    console.log(e.key)
-    if(e.key === " "){
-      e.preventDefault()
-      handleFlip()
-    } else if (e.key === "ArrowLeft") {
-      e.preventDefault()
-      document.getElementById("BackButton").click()
-    } else if (e.key === "ArrowRight") {
-      e.preventDefault()
-      document.getElementById("NextButton").click()
-    }
-  }
-  
-  useEffect(() => {
-    document.addEventListener("keydown", onKeydown)
-    return () => document.removeEventListener("keydown", onKeydown)
-  })
  
   return (
     <>
@@ -112,7 +93,7 @@ function Flashcards({ search }) {
               </div>
             </ButtonBack>
 
-            <div onClick={e => handleFlip()} className="flashcard-button-flip">
+            <div id="Flip" onClick={e => handleFlip()} className="flashcard-button-flip">
               <MdSwapHoriz />
             </div>
 
