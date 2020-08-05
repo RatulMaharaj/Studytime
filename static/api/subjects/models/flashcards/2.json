@@ -1,0 +1,35 @@
+{
+  "pack": "Markov Chains",
+  "cards": [
+    {
+      "id": 1,
+      "question": "Define a Markov Chain?",
+      "answer": "A Markov chain is a stochastic process with a discrete time set and a discrete state space that has the Markov Property. <br/><br/> A process has the Markov property if the probability of being in any given state at a given time depends only on the state currently occupied (and not on the past history of the process)."
+    },
+    {
+      "id": 2,
+      "question": "Define the transition probabilities $$p^{(m,n)}_{ij}$$ of a Markov chain $$X_{0}, X_{1}, X_{2}, \\cdots$$",
+      "answer": "The transition probabilities $$p^{(m,n)}_{ij}$$ of a Markov chain $$X_{0}, X_{1}, X_{2}, \\cdots$$ are defined as follows: <br/><br/> $$p^{(m,n)}_{ij}=P(X_{n}=j|X_{m}=i)$$ <br/><br/> This is sometimes called the $$n-m$$ step transition probability."
+    },
+    {
+      "id": 3,
+      "question": "State the two sets of parameters that have to be specified in order to characterise the distribution of a Markov chain.",
+      "answer": "The distribution of a Markov chain is fully determined once the following two sets of parameters are specified:<br/><br/> <ul style='text-align:left'><li>the one step transition probabilities $$p^{(n,n+1)}_{ij}$$</li><br/><li>the initial probability distribution $$q_{k} = P[X_{0}=k]$$</li></ul>"
+    },
+    {
+      "id": 4,
+      "question": "Explain what it means for a Markov chain $$X_{0}, X_{1}, X_{2}, \\cdots$$ to be time-homogeneous.",
+      "answer": "A Markov chain is said to be time-homogeneous if it's transition probabilities depend only on the time differences, i.e. if: <br/><br/> $$P[X_{n+m}=j|X_{n}=i] = p^{(m)}_{ij}$$ <br/><br/> for all values of $$n$$.<br/><br/> The one step transition probabilities $$p^{(1)}_{ij}$$ are usually denoted by $$p_{ij}$$."
+    },
+    {
+      "id": 5,
+      "question": "Define the transition matrix of a time-homogeneous Markov chain.",
+      "answer": "The transition matrix, $$P$$, of a time-homogeneous Markov chain is a $$N$$ x $$N$$ matrix where $$N$$ is the (possibly infinite) number if states in $$S$$. The $$i,j$$ th entry of the matrix is the one-step transition probability $$p_{ij}$$."
+    },
+    {
+      "id": 6,
+      "question": "State the value of the sum of the entries in each row of a transition matrix.",
+      "answer": "The entries in each row of the transition matrix sum to 1.<br/><br/> This is an example of the law of total probability. We have added  the probabilities of all the possible states that the process can be in after one time period, given that it is currently in a particular state."
+    }
+  ]
+}
