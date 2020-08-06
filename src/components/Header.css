@@ -22,8 +22,59 @@
   outline: 1px;
 }
 
+.hotkeys{
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.hotkeylist{
+  position: absolute;
+  visibility: hidden;
+  background-color: #fff;
+  right: 1em;
+  height: auto;
+  width: 10em;
+  padding: 1em;
+  border-radius: 0.25em;
+  opacity: 0;
+  box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,.12);
+  transition: visibility 0.25s, opacity 0.25s linear;
+  z-index: 999;
+}
+
+.hotkeys:hover > .hotkeylist{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.25s, opacity 0.25s linear;
+}
+
+.hotkey-item{
+  color: var(--accent-purple);
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.hotkey-title{
+  font-size: medium;
+}
+
+.hotkey-key{
+  background-color: var(--accent-purple-transparent);
+  padding: 0.5em 0.5em;
+  font-size: 0.65em;
+  border-radius: 0.25em;
+  min-width: 3em;
+  min-height: 2em;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .Admin button:last-child {
     display: none;
   }
 }
+
