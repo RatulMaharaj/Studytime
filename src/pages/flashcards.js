@@ -15,8 +15,10 @@ function FlashcardsPage() {
     } else if (e.key === "ArrowRight") {
       e.preventDefault()
       document.getElementById("NextButton").click()
-    }
-    else if (e.key === "Escape") {
+    } else if (e.key === "h" || e.key === "H") {
+      e.preventDefault()
+      document.getElementById('LogoHome').click()
+    } else if (e.key === "Escape") {
       e.preventDefault()
       window.history.back()
     }

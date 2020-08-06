@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import { MdKeyboard } from "react-icons/md"
+import { MdKeyboard, MdPerson } from "react-icons/md"
 import Logo from "./utility/Logo"
 import "./Header.css"
 
 function Header() {
-  const [showHotkeyList, setShowHotkeyList] = useState("")
   return (
     <div className="Header">
       <div className="Logo">
@@ -14,8 +13,9 @@ function Header() {
         </Link>
       </div>
       <div className="Admin">
-        {/* <button className="btn-purple">Login</button>
-        <button className="btn-purple">Sign Up</button> */}
+      <div className="login">
+        <MdPerson/>
+      </div>
         <div className="hotkeys">
           <MdKeyboard />
           <div className="hotkeylist">

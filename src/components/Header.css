@@ -15,11 +15,18 @@
 
 .Admin {
   padding-right: 2em;
+  display: flex;
+  flex-direction: row;
+  
 }
 
-.Admin button {
+.Admin > div {
   margin-left: 1em;
-  outline: 1px;
+}
+
+.login{
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 .hotkeys{
