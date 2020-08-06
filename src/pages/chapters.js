@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
 import Chapters from "../components/chapters/Chapters"
 import SEO from "../components/seo"
 
@@ -25,9 +24,8 @@ function ChapterPage() {
       <SEO title="Chapters" />
       <Header />
       <div className="content-wrapper">
-        <Chapters hello="0" />
+        <Chapters />
       </div>
-      <Footer />
     </div>
   )
 }

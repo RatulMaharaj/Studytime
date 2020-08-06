@@ -30,6 +30,7 @@
   font-size: 1.5em !important;
   color: var(--accent-purple);
   border: 2px solid var(--accent-purple);
+  cursor: pointer;
 }
 
 @media screen and (min-width:1024px) {
@@ -55,7 +56,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  
+  cursor: pointer;
 }
 /* adapted from https://www.w3schools.com/howto/howto_css_flip_card.asp */
 

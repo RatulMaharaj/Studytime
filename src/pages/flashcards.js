@@ -1,6 +1,5 @@
 import React, {useEffect} from "react"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
 import Flashcards from "../components/flashcards/Flashcards"
 import SEO from "../components/seo"
 
@@ -34,7 +33,6 @@ function FlashcardsPage() {
       <div className="content-wrapper">
         <Flashcards />
       </div>
-      <Footer />
     </div>
   )
 }

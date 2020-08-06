@@ -1,6 +1,5 @@
 import React, {useEffect} from "react"
 import Header from "../components/Header"
-import Footer from "../components/Footer"
 import Apps from "../components/apps/Apps"
 import SEO from "../components/seo"
 
@@ -35,7 +34,6 @@ function AppPage() {
       <div className="content-wrapper">
         <Apps/>
       </div>
-      <Footer />
     </div>
   )
 }

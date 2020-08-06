@@ -49,7 +49,7 @@ function Flashcards({ search }) {
     <>
       <div className="Content">
         <div className="Intro">
-          <h1>{cardPack.pack}</h1>
+          <h1>Chapter {chapter}</h1>
           {isTouch ? (
             <p>
               Double tap on the card to flip it over. Swipe to navigate between
@@ -57,8 +57,7 @@ function Flashcards({ search }) {
             </p>
           ) : (
             <p>
-              Press the spacebar to flip the card over. Use the arrows to
-              navigate between cards.
+              {cardPack.pack}
             </p>
           )}
         </div>
