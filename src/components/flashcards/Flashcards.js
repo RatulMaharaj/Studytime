@@ -32,8 +32,6 @@ function Flashcards({ search }) {
     isFlipped === "" ? setIsFlipped("flipped") : setIsFlipped("")
   }
 
-  const [isTouch, setIsTouch] = useState(true)
-
   useEffect(() => {
     try {
       setCardPack(
@@ -42,24 +40,14 @@ function Flashcards({ search }) {
     } catch (error) {
       console.log(error)
     }
-    setIsTouch("ontouchstart" in window || navigator.msMaxTouchPoints > 0)
   }, [cardPack, cardID, subject, chapter])
- 
+
   return (
     <>
       <div className="Content">
         <div className="Intro">
           <h1>Chapter {chapter}</h1>
-          {isTouch ? (
-            <p>
-              Double tap on the card to flip it over. Swipe to navigate between
-              cards.
-            </p>
-          ) : (
-            <p>
-              {cardPack.pack}
-            </p>
-          )}
+          <p>{cardPack.pack}</p>
         </div>
         <CarouselProvider
           totalSlides={cardPack.cards.length}
@@ -92,7 +80,11 @@ function Flashcards({ search }) {
               </div>
             </ButtonBack>
 
-            <div id="Flip" onClick={e => handleFlip()} className="flashcard-button-flip">
+            <div
+              id="Flip"
+              onClick={e => handleFlip()}
+              className="flashcard-button-flip"
+            >
               <MdSwapHoriz />
             </div>
 
