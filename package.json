@@ -16,7 +16,7 @@
     "gatsby-remark-katex": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.19",
     "gatsby-transformer-json": "^2.4.11",
-    "gatsby-transformer-remark": "^2.8.25",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.7",
     "katex": "^0.11.1",
     "prop-types": "^15.7.2",
